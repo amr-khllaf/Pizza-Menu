@@ -21,7 +21,7 @@ export const pizzaData = [
     ingredients: "Tomato, mozarella, spinach, and ricotta cheese",
     price: 12,
     photoName: "spinaci.jpg",
-    soldOut: false,
+    soldOut: true,
   },
   {
     id: 4,

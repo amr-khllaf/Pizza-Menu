@@ -3,16 +3,16 @@ export default function Pizza({ pizzaObj }) {
   const { soldOut, photoName, name, ingredients, price } = pizzaObj;
   console.log(photoName);
 
-  if (soldOut) return null;
+  // if (soldOut) return null;
 
   return (
     <>
-      <li className="pizza">
-        <img src={`/public/assets/${photoName}`} alt={name} />
+      <li className={`pizza ${soldOut ? "sold-out" : ""}`}>
+        <img src={`${photoName}`} alt={name} />
         <div className="">
           <h3>{name}</h3>
           <p>{ingredients}</p>
-          <p>${price}</p>
+          <span>{soldOut ? "Sold Out" : `$${price}`}</span>
         </div>
       </li>
     </>
